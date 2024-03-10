@@ -1,0 +1,15 @@
+Titel: Rust lernen, aber wie?
+
+Abstract:
+
+Dieser Vortrag ist ein Erfahrungsbericht über den Rust-Lernprozess aus der Perspektive eines Einsteigers mit hautpsächlicher Erfahrung in Python.
+Besondere Aufmerksamkeit soll dabei nicht nur auf der Sprache selbst, sondern auch auf das sie umgebene Ökosystem aus Tooling und Dokumentation gelegt werden.
+Welche neuen Konzepte in Rust von anderen Programmiersprachen, mit denen man vielleicht durch Studium und Schule vertraut ist, abweichen, wie Rust beim Lernen hilft, und welche Schwierigkeiten dennoch bleiben.
+Zum Schluss möchte ich Tipps geben und Resourcen aufzeigen, welche mir bei meinem anhaltenden Lernprozess helfen, beziehungsweise geholfen haben.
+
+Shortpaper:
+
+Rust lernen, aber wie?
+----------------------
+
+
