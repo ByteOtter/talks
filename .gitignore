@@ -1,2 +1,6 @@
 assets/not_committing/*
 !assets/not_committing/README.md
+
+codescraps/*/target/
+
+.vscode/
