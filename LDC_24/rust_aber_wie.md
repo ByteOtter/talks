@@ -32,7 +32,7 @@ https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock is li
 
 # Wer bin ich?
 
-![bg right:40% 80%](../assets/not_committing/me_face.jpg)
+![bg right](../assets/images/misc/foss_presentation/otter.jpg)
 
 - Chris
 - 25 Jahre alt
