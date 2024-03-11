@@ -98,7 +98,8 @@ Matrix: @chris:kde.org
 
 Python
 ```python
-def some_func(x: str): ...
+def some_func(x: str):
+    # ...
 
 x: str = "Hello"
 
@@ -216,7 +217,8 @@ fn write_output<T: std::format::Display>(parameter: T) -> () {
 
 - Enums and möglichen Datentypen
 - Elaubt die Generalisierung von Funktionen
-- Erlaubt die beschränkung eines Variablentyps auf eine Anzahl von Möglichkeiten
+- Erlaubt die Beschränkung eines Variablentyps auf eine Anzahl von Möglichkeiten
+
 
 ---
 
@@ -259,6 +261,7 @@ fn main() {
 - Nicht einschüchtern lassen
 - Compilerfehler beachten (`rustc --explain` benutzen)
 - Fokus auf die obigen Konzepte
+- Nicht scheuen einfache Lösungen zu verwenden
 
 ---
 
