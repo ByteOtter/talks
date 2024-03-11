@@ -25,7 +25,7 @@ Matrix: @chris:kde.org
 ![bg right 100%](../assets/not_committing/old_man_yells_at_rust.jpg)
 
 <!-- _footer: "Slides
-https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock is licensed under CC BY-NC-SA 4.0"
+https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock. Licensed under CC BY-NC-SA 4.0"
 -->
 
 ---
@@ -282,8 +282,9 @@ fn main() {
 
 # Der Compiler ist dein Freund
 
-![bg right 80%](../assets/not_committing/love_companion_rustc.jpg)
-<small>Credit: CalicoStonewolf @ Deviantart</small>
+![bg right 70%](../assets/not_committing/love_companion_rustc.jpg)
+
+<!-- _footer: Original Companion Cube image by CalicoStonewolf @ Devientart-->
 
 ---
 
@@ -348,4 +349,4 @@ error: could not compile `error_examples` (bin "error_examples") due to 1 previo
 
 # Vielen Dank!
 
-Folien auf https://github.com/ByteOtter/talks
+Folien auf https://github.com/ByteOtter/talks/LDC_24/
