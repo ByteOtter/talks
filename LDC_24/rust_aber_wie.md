@@ -3,7 +3,17 @@ marp: true
 theme: default
 class: invert
 backgroundImage:
+paginate: true
 ---
+
+<!-- Some CSS styling for the page numbers. Ignore this. -->
+<style>
+section::after {
+ content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+}
+</style>
+
+<!-- paginate: skip -->
 
 # Rust lernen, aber wie?
 
@@ -13,6 +23,10 @@ Website: [byteotter.gay](https://byteotter.gay)
 Matrix: @chris:kde.org
 
 ![bg right 100%](../assets/not_committing/old_man_yells_at_rust.jpg)
+
+<!-- _footer: "Slides
+https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock is licensed under CC BY-NC-SA 4.0"
+-->
 
 ---
 
@@ -31,11 +45,10 @@ Matrix: @chris:kde.org
 
 # Index
 
-1. Wer bin ich?
-2. Sollte man Rust als Anfänger lernen?
-3. Rusts "Lernkurve"
-4. Ein paar wichtige Konzepte
-5. Ressourcen und Tipps
+1. Sollte man Rust als Anfänger lernen?
+2. Rusts "Lernkurve"
+3. Ein paar wichtige Konzepte
+4. Ressourcen und Tipps
 
 ---
 
@@ -50,6 +63,8 @@ Matrix: @chris:kde.org
 # Doch ...
 
 ---
+
+<!-- paginate: true -->
 
 # Die Lernerfahrung
 
@@ -206,7 +221,7 @@ Zwei wichtige Typen:
 - Die Art möglicher Datentypen kann eingeschränkt werden (`Traits`)
 
 ```rust
-fn write_output<T: std::format::Display>(parameter: T) -> () {
+fn write_output<T: std::format::Display>(parameter: T) -> Result<(), IOError> {
     // ...
 }
 ```
