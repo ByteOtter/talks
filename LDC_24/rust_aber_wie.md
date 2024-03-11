@@ -319,6 +319,7 @@ error: could not compile `error_examples` (bin "error_examples") due to 1 previo
 - Rust in der Praxis:
     - [Jon Gjengset](https://www.youtube.com/@jonhoo/videos)
 - Codebeispiele in [`Rust by Example`](https://doc.rust-lang.org/stable/rust-by-example/)
+- Umsetzungsbeispiele & Snippets im [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
 
 ---
 
