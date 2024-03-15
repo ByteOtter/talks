@@ -13,6 +13,79 @@ section::after {
 }
 </style>
 
+<!-- More styling for image positions. -->
+<style>
+img[alt~="top-right"] {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 10%
+}
+</style>
+
+<style>
+img[alt~="top-right-med"] {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 25%
+}
+</style>
+
+<style>
+img[alt~="top-right-big"] {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 40%
+}
+</style>
+
+<style>
+img[alt~="top-left"] {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 10%
+}
+</style>
+
+<style>
+img[alt~="top-left-med"] {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 25%
+}
+</style>
+
+<style>
+img[alt~="top-left-big"] {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 40%
+}
+</style>
+
+<style>
+img[alt~="bottom-right"] {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 10%
+}
+</style>
+
+<style>
+img[alt~="bottom-left"] {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  height: 10%
+}
+</style>
+
 <!-- paginate: skip -->
 
 # Rust lernen, aber wie?
@@ -45,9 +118,9 @@ https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock. Lice
 
 # Index
 
-1. Sollte man Rust als Anfänger lernen?
-2. Rusts "Lernkurve"
-3. Ein paar wichtige Konzepte
+1. Rusts "Lernkurve"
+2. Ein paar wichtige Konzepte
+3. Der Compiler ist dein Freund
 4. Ressourcen und Tipps
 
 ---
@@ -74,12 +147,9 @@ https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock. Lice
 
 # Die Lernerfahrung
 
-- Dinge, die es gibt
-  - Ownership Prinzip
-  - Borrow-Checker
-  - Immutability by default
-  - Speichersicherheit dank Ownership / Borrowing
-  - Null Safety
+## Was ist Rust?
+
+- System-level Sprache mit modernen Features
 
 ---
 
@@ -94,7 +164,18 @@ https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock. Lice
 
 ---
 
-# Ein paar wichtige Konzepte
+# Die Lernerfahrung
+
+- Dinge, die es gibt
+  - Ownership Prinzip
+  - Borrow-Checker
+  - Immutability by default
+  - Speichersicherheit dank Ownership / Borrowing
+  - Null Safety
+
+---
+
+# Wichtige Konzepte
 
 ---
 
@@ -201,7 +282,8 @@ Zwei wichtige Typen:
 - `&str` - Der "String slice"
   - Referenz auf UTF-8 Byte Sequenz
   - *Keine Ownership*
-- Vergleichbar mit `char *` und `std::string` in C++
+
+<!--Referenz auf statischen Memory-->
 
 ---
 
@@ -230,10 +312,13 @@ fn write_output<T: std::format::Display>(parameter: T) -> Result<(), IOError> {
 
 # Typed Enums
 
-- Enums and möglichen Datentypen
-- Elaubt die Generalisierung von Funktionen
-- Erlaubt die Beschränkung eines Variablentyps auf eine Anzahl von Möglichkeiten
+- Auswahl an möglichen Datentypen
+- Erlauben die Generalisierung von Funktionen
+- Beschränkung eines Variablentyps auf eine Anzahl von Möglichkeiten
 
+<!--
+- Kann verschieden States (Variants) haben
+-->
 
 ---
 
@@ -249,6 +334,10 @@ fn write_output<T: std::format::Display>(parameter: T) -> Result<(), IOError> {
     - Entweder `Some(T)`
     - Oder `None`
     => Verhindert nicht behandelte Null states.
+
+<!--
+- Es gibt nie einen invalden state (außer unsafe dann selbst schuld)
+-->
 
 ---
 
@@ -274,8 +363,9 @@ fn main() {
 # Tipps & Strategien
 
 - Nicht einschüchtern lassen
-- Compilerfehler beachten (`rustc --explain` benutzen)
+- Compilerfehler beachten (`rustc --explain`)
 - Fokus auf die obigen Konzepte
+- [`rustlings`](https://github.com/rust-lang/rustlings) 
 - Nicht scheuen einfache Lösungen zu verwenden
 
 ---
@@ -290,6 +380,7 @@ fn main() {
 
 # Der compiler ist dein Freund
 
+Findet den Fehler:
 ```rust
 fn main() {
     let x = 5;
@@ -320,7 +411,7 @@ warning: `error_examples` (bin "error_examples") generated 2 warnings
 error: could not compile `error_examples` (bin "error_examples") due to 1 previous error; 2 warnings emitted
 ```
 
-- gibt die fehlerhaften Codestellen aus
+- gibt die fehlerhafte Codestellen aus
 - Schlägt Lösungen vor
 
 ---
