@@ -98,7 +98,7 @@ Matrix: @chris:kde.org
 ![bg right 100%](../assets/not_committing/old_man_yells_at_rust.jpg)
 
 <!-- _footer: "Slides
-https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock. Licensed under CC BY-NC-SA 4.0"
+https://github.com/ByteOtter/talks/tree/main/LDC_24/ \n  © 2024 by Christopher Hock. Licensed under CC BY-NC-SA 4.0"
 -->
 
 ---
@@ -147,14 +147,6 @@ https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock. Lice
 
 # Die Lernerfahrung
 
-## Was ist Rust?
-
-- System-level Sprache mit modernen Features
-
----
-
-# Die Lernerfahrung
-
 - Was es nicht gibt:
   - Objektorientierung
   - Garbage Collection
@@ -179,6 +171,12 @@ https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock. Lice
 
 ---
 
+# Ownership
+
+![bg right](../assets/not_committing/seagulls.jpg)
+
+---
+
 # [Ownership](https://www.youtube.com/watch?v=DJdUjjOmyx8)
 
 > Satz an Regeln, die Speichersicherheit ohne Garbage Collection ermöglichen
@@ -186,7 +184,11 @@ https://github.com/ByteOtter/talks/LDC_24/ \n  © 2024 by Christopher Hock. Lice
 - Alle Daten haben ihren Besitzer / Owner
 - Es kann nur einen Owner geben
 - Geht der Besitzer Out-of-Scope, wird der Wert aufgeräumt
-- Regeln werden zu Compiletime geprüft
+- Regeln werden zu Compiletime geprüf
+
+<!--
+- Der Scope in dem ein Bining (z.B. ne Variable) angelegt wird, ist der Besitzer dieses Bindings.
+-->
 
 ---
 
@@ -267,6 +269,8 @@ fn main() {
 
 # Die String Typen
 
+![bg right](../assets/not_committing/chain.avif)
+
 ---
 
 # Die String Typen
@@ -297,6 +301,10 @@ Zwei wichtige Typen:
 
 ---
 
+# Generalisierung durch Generics
+
+---
+
 # Generics
 
 - Platzhalter für beliebigen Datentypen, der bestimmtes `Trait` implementiert
@@ -308,6 +316,21 @@ fn write_output<T: std::format::Display>(parameter: T) -> Result<(), IOError> {
 }
 ```
 
+<!--
+- Erlaubt Generalisierung von Funktionsparametern
+- Traits sind definiertes Verhalten, welches von mehreren `structs` auf unterschiedliche
+  Arten implementiert werden können
+
+- Funktionieren wie Interfaces in Java
+  - Geeignet um sich OOP zusammenzuhacken
+-->
+
+---
+
+# Typed Enums
+
+![bg right](../assets/not_committing/fruit%20basket.avif)
+
 ---
 
 # Typed Enums
@@ -317,12 +340,16 @@ fn write_output<T: std::format::Display>(parameter: T) -> Result<(), IOError> {
 - Beschränkung eines Variablentyps auf eine Anzahl von Möglichkeiten
 
 <!--
-- Kann verschieden States (Variants) haben
+- Kann einen aus mehreren verschieden States (Variants) haben
 -->
 
 ---
 
-# Null Safety
+# Null Safety & Error Handling
+
+---
+
+# Null Safety & Error Handling
 
 - Zwei spezielle enums: `Result<T, E>`, `Option<T>`
 - Beide geben Auskunft über Erfolg/Misserfolg
@@ -336,7 +363,7 @@ fn write_output<T: std::format::Display>(parameter: T) -> Result<(), IOError> {
     => Verhindert nicht behandelte Null states.
 
 <!--
-- Es gibt nie einen invalden state (außer unsafe dann selbst schuld)
+- Es gibt nie einen invalden state (außer unsafe dann selbst Schuld)
 -->
 
 ---
@@ -362,10 +389,16 @@ fn main() {
 
 # Tipps & Strategien
 
+![bg right fit](../assets/not_committing/bulb.avif)
+
+---
+
+# Tipps & Strategien
+
 - Nicht einschüchtern lassen
 - Compilerfehler beachten (`rustc --explain`)
 - Fokus auf die obigen Konzepte
-- [`rustlings`](https://github.com/rust-lang/rustlings) 
+- [`rustlings`](https://github.com/rust-lang/rustlings)
 - Nicht scheuen einfache Lösungen zu verwenden
 
 ---
@@ -440,4 +473,4 @@ error: could not compile `error_examples` (bin "error_examples") due to 1 previo
 
 # Vielen Dank!
 
-Folien auf https://github.com/ByteOtter/talks/LDC_24/
+Folien auf https://github.com/ByteOtter/talks/tree/main/LDC_24
